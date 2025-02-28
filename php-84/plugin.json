@@ -8,7 +8,8 @@
     "php84Extensions.xdebug@latest",
     "php84Extensions.intl@latest",
     "php84Extensions.bcmath@latest",
-    "php84Extensions.mysqli@latest"
+    "php84Extensions.mysqli@latest",
+    "php84Extensions.amqp@latest"
   ],
   "env": {
     "PHP_CS_FIXER_IGNORE_ENV": "1"

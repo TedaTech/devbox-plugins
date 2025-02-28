@@ -2,7 +2,8 @@
     "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
     "include": [
       "path:./base/plugin.json",
-      "path:./github/plugin.json"
+      "path:./github/plugin.json",
+      "path:./aider/plugin.json"
     ],
     "shell": {
       "scripts": {
