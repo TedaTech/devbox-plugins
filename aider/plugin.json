@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox-plugin.schema.json",
+  "name": "tedatech-aider",
+  "version": "0.0.1",
+  "description": "Plugin for TeDa Tech platform projects with aider.",
+  "create_files": {
+    ".aider.conf.yml": ".aider.conf.yml"
+  }
+}

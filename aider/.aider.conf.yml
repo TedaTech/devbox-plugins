@@ -1,0 +1,9 @@
+env-file: .env.test
+
+read: CONVENTIONS.md
+
+auto-lint: true
+lint-cmd: devbox run fix; devbox run lint
+
+auto-test: true
+test-cmd: devbox run test
