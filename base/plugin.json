@@ -7,7 +7,7 @@
     "yamllint@latest",
     "yamlfmt@latest",
     "git@latest",
-    "nodePackages.jsonlint"
+    "nodePackages.jsonlint@latest"
   ],
   "shell": {
     "scripts": {
