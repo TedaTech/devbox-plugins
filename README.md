@@ -7,6 +7,7 @@ Include any of the following plugins based on the project.
 
 ```json
 "include": [
-  "github:TedaTech/devbox-plugins/main?dir=php-84-symfony"
+  "github:TedaTech/devbox-plugins/main?dir=php-84-symfony",
+  "github:TedaTech/devbox-plugins/main?dir=github"
 ],
 ```

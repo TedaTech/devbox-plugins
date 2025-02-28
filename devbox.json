@@ -1,7 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
-    "packages": [
-      "git@latest"
-    ]
+    "include": [
+      "path:./base/plugin.json",
+      "path:./github/plugin.json"
+    ],
+    "shell": {
+      "scripts": {
+        "test": "echo 'Nothing to test.'",
+        "build": "echo 'Nothing to build.'"
+      }
+    }
   }
   

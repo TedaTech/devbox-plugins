@@ -5,5 +5,9 @@
   "description": "Plugin for TeDa Tech platform GitHub based projects.",
   "packages": [
     "act@latest"
-  ]
+  ],
+  "create_files": {
+    ".github/workflows/build.yml": ".github/workflows/build.yaml",
+    "release.config.mjs": "release.config.mjs"
+  }
 }
