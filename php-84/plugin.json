@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox-plugin.schema.json",
+  "name": "tedatech-php-84",
+  "version": "0.0.1",
+  "description": "Plugin for TeDa Tech platform PHP 8.4 based projects.",
+  "packages": [
+    "php84@latest",
+    "php84Extensions.xdebug@latest",
+    "php84Extensions.intl@latest",
+    "php84Extensions.bcmath@latest",
+    "php84Extensions.mysqli@latest"
+  ],
+  "env": {
+    "PHP_CS_FIXER_IGNORE_ENV": "1"
+  },
+  "include": [
+    "plugin:php"
+  ],
+  "shell": {
+    "scripts": {
+      "lint:php": [
+        "vendor/bin/php-cs-fixer check --diff"
+      ],
+      "fix:php": [
+        "yamlfmt -conf .yamlfmt"
+      ]
+    }
+  }
+}

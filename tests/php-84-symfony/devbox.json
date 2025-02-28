@@ -1,0 +1,7 @@
+{
+  "include": [
+    "path:./../../base/plugin.json",
+    "path:./../../php-symfony/plugin.json",
+    "path:./../../php-84/plugin.json"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox-plugin.schema.json",
+  "name": "tedatech-base",
+  "version": "0.0.1",
+  "description": "Plugin for TeDa Tech platform based projects.",
+  "packages": [
+    "yamllint@latest",
+    "yamlfmt@latest",
+    "git@latest",
+    "nodePackages.jsonlint"
+  ],
+  "shell": {
+    "scripts": {
+      "lint:yaml": [
+        "yamllint -c .yamllint . -f auto"
+      ],
+      "format:yaml": [
+        "yamlfmt -conf .yamlfmt"
+      ],
+      "lint:json": [
+        "yamllint -c .yamllint . -f auto"
+      ],
+      "format:json": [
+        "yamlfmt -conf .yamlfmt"
+      ]
+    }
+  }
+}

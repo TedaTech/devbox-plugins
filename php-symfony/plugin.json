@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox-plugin.schema.json",
+  "name": "tedatech-php-symfony",
+  "version": "0.0.1",
+  "description": "Plugin for TeDa Tech platform PHP Symfony based projects.",
+  "packages": [
+    "nodejs@22",
+    "symfony-cli@latest",
+    "playwright-test@latest"
+  ],
+  "shell": {
+    "scripts": {
+      "build": [
+        "npm install",
+        "composer install --no-progress --no-suggest --prefer-dist",
+        "npm run build"
+      ],
+      "test": [
+        "docker compose up --wait",
+        "php bin/console doctrine:database:drop --env=test --force --if-exists",
+        "php bin/console doctrine:database:create --env=test --if-not-exists",
+        "php bin/console doctrine:schema:update --env=test --force",
+        "php bin/console doctrine:fixtures:load --env=test --no-interaction",
+        "php bin/phpunit --stop-on-failure"
+      ],
+      "dev": [
+        "docker compose up --wait",
+        "php bin/console doctrine:database:create --if-not-exists",
+        "php bin/console doctrine:schema:update --force",
+        "php bin/console doctrine:fixtures:load --no-interaction",
+        "symfony server:start &",
+        "npm run dev-server &",
+        "symfony open:local",
+        "wait",
+        "kill $$"
+      ],
+      "lint": [
+        "devbox run lint:yaml",
+        "devbox run lint:php"
+      ],
+      "format": [
+        "devbox run format:yaml",
+        "devbox run format:php"
+      ]
+    }
+  }
+}

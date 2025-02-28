@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox-plugin.schema.json",
+  "name": "tedatech-github",
+  "version": "0.0.1",
+  "description": "Plugin for TeDa Tech platform GitHub based projects.",
+  "packages": [
+    "act@latest"
+  ]
+}

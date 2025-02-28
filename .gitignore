@@ -1,0 +1,6 @@
+###> app ###
+.idea
+.devbox
+.aider*
+!.aider.conf.yml
+###< app ###
