@@ -12,11 +12,12 @@
     "php84Extensions.amqp@latest"
   ],
   "env": {
-    "PHP_CS_FIXER_IGNORE_ENV": "1"
+    "PHP_CS_FIXER_IGNORE_ENV": "1",
+    "PHPRC": "{{ .DevboxDirRoot }}/php/php.ini"
   },
-  "include": [
-    "plugin:php"
-  ],
+  "create_files": {
+    "{{ .DevboxDirRoot }}/php/php.ini": "devbox.d/php/php.ini"
+  },
   "shell": {
     "scripts": {
       "lint:php": [
