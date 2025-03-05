@@ -18,6 +18,7 @@
       "test": [
         "docker compose up --wait --quiet-pull",
         "composer install --no-progress",
+        "npm run build",
         "php bin/console doctrine:database:drop --env=test --force --if-exists",
         "php bin/console doctrine:database:create --env=test --if-not-exists",
         "php bin/console doctrine:schema:update --env=test --force",
