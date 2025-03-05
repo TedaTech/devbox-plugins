@@ -14,8 +14,9 @@
     "{{ .Virtenv }}/docker-release.sh": ".devbox/docker-release.sh"
   },
   "shell": {
+    "init_hook": "chmod +x {{ .Virtenv }}/docker-release.sh || true",
     "scripts": {
-      "release": "{{ .Virtenv }}/docker-release.sh"
+      "release": "[ -x {{ .Virtenv }}/docker-release.sh ] || chmod +x {{ .Virtenv }}/docker-release.sh; {{ .Virtenv }}/docker-release.sh"
     }
   }
 }
