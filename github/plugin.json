@@ -8,6 +8,12 @@
   ],
   "create_files": {
     ".github/workflows/release.yml": ".github/workflows/release.yaml",
-    "release.config.mjs": "release.config.mjs"
+    "release.config.mjs": "release.config.mjs",
+    "{{ .Virtenv }}/docker-release.sh": ".devbox/docker-release.sh"
+  },
+  "shell": {
+    "scripts": {
+      "release": "{{ .Virtenv }}/docker-release.sh"
+    }
   }
 }
