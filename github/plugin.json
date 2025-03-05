@@ -7,7 +7,7 @@
     "act@latest"
   ],
   "create_files": {
-    ".github/workflows/build.yml": ".github/workflows/build.yaml",
+    ".github/workflows/release.yml": ".github/workflows/release.yaml",
     "release.config.mjs": "release.config.mjs"
   }
 }
