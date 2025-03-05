@@ -7,7 +7,9 @@
     "act@latest"
   ],
   "create_files": {
-    ".github/workflows/release.yml": ".github/workflows/release.yaml",
+    ".github/setup/action.yaml": ".github/setup/action.yaml",
+    ".github/workflows/test.yaml": ".github/workflows/test.yaml",
+    ".github/workflows/release.yaml": ".github/workflows/release.yaml",
     "release.config.mjs": "release.config.mjs",
     "{{ .Virtenv }}/docker-release.sh": ".devbox/docker-release.sh"
   },
