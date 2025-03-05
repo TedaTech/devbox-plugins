@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "description": "Plugin for TeDa Tech platform PHP Symfony with PHP 8.4 based projects.",
   "include": [
-    "github:TedaTech/devbox-plugins/v1.2.1?dir=base",
-    "github:TedaTech/devbox-plugins/v1.2.1?dir=php-84",
-    "github:TedaTech/devbox-plugins/v1.2.1?dir=php-symfony"
+    "github:TedaTech/devbox-plugins/v1.4.0?dir=base",
+    "github:TedaTech/devbox-plugins/v1.4.0?dir=php-84",
+    "github:TedaTech/devbox-plugins/v1.4.0?dir=php-symfony"
   ]
 }
