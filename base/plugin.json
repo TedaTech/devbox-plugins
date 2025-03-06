@@ -10,7 +10,8 @@
     "nodePackages.jsonlint@latest",
     "k9s@latest",
     "kubectl@latest",
-    "kubernetes-helm@latest"
+    "kubernetes-helm@latest",
+    "skaffold@latest"
   ],
   "shell": {
     "scripts": {
