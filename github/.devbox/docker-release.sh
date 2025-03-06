@@ -41,6 +41,9 @@ if [ -z "$APP_REPOSITORY" ]; then
       APP_REPOSITORY="organization/app"
       ;;
   esac
+
+  # Convert APP_REPOSITORY to lowercase for consistency
+  APP_REPOSITORY=$(echo "$APP_REPOSITORY" | tr '[:upper:]' '[:lower:]')
   
   echo "Setting default APP_REPOSITORY: $APP_REPOSITORY"
 fi
