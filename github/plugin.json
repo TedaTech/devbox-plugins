@@ -16,7 +16,7 @@
   "shell": {
     "init_hook": "chmod +x {{ .Virtenv }}/docker-release.sh || true",
     "scripts": {
-      "release": "[ -x {{ .Virtenv }}/docker-release.sh ] || chmod +x {{ .Virtenv }}/docker-release.sh; {{ .Virtenv }}/docker-release.sh"
+      "release": "{{ .Virtenv }}/docker-release.sh"
     }
   }
 }

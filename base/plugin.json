@@ -13,8 +13,13 @@
     "kubernetes-helm@latest",
     "skaffold@latest"
   ],
+  "create_files": {
+    "{{ .Virtenv }}/create-env-secret.sh": ".devbox/create-env-secret.sh"
+  },
   "shell": {
+    "init_hook": "chmod +x {{ .Virtenv }}/create-env-secret.sh || true",
     "scripts": {
+      "create-env-secret": "{{ .Virtenv }}/create-env-secret.sh",
       "lint:yaml": [
         "yamllint -c .yamllint . -f auto"
       ],
