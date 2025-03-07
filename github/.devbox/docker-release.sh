@@ -87,7 +87,10 @@ fi
 
 # Execute Docker build and push commands
 echo "Building Docker image: $APP_REPOSITORY:$APP_TAG"
-docker build -t "$APP_REPOSITORY:$APP_TAG" .
+docker build \
+  --cache-from "type=gha" \
+  --cache-to "type=gha,mode=max" \
+  -t "$APP_REPOSITORY:$APP_TAG" .
 
 echo "Pushing Docker image: $APP_REPOSITORY:$APP_TAG"
 docker push "$APP_REPOSITORY:$APP_TAG"
