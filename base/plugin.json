@@ -9,9 +9,11 @@
     "git@latest",
     "nodePackages.jsonlint@latest",
     "k9s@latest",
+    "kind@latest",
     "kubectl@latest",
     "kubernetes-helm@latest",
-    "skaffold@latest"
+    "skaffold@latest",
+    "gh@latest"
   ],
   "create_files": {
     "{{ .Virtenv }}/create-env-secret.sh": ".devbox/create-env-secret.sh"
