@@ -14,7 +14,8 @@
     "kubernetes-helm@latest",
     "skaffold@latest",
     "gh@latest",
-    "kubeswitch@latest"
+    "kubeswitch@latest",
+    "krew@latest"
   ],
   "create_files": {
     "{{ .Virtenv }}/create-env-secret.sh": ".devbox/create-env-secret.sh"

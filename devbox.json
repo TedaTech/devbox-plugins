@@ -10,8 +10,5 @@
       "test":  "echo 'Nothing to test.'",
       "build": "echo 'Nothing to build.'"
     }
-  },
-  "packages": {
-    "krew": "latest"
   }
 }
