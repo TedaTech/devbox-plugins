@@ -21,7 +21,10 @@
     "{{ .Virtenv }}/create-env-secret.sh": ".devbox/create-env-secret.sh"
   },
   "shell": {
-    "init_hook": "chmod +x {{ .Virtenv }}/create-env-secret.sh || true",
+    "init_hook": [
+      "chmod +x {{ .Virtenv }}/create-env-secret.sh || true",
+      "export PATH=\"${KREW_ROOT:-$HOME/.krew}/bin:$PATH\""
+    ],
     "scripts": {
       "create-env-secret": "{{ .Virtenv }}/create-env-secret.sh",
       "lint:yaml": [
