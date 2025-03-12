@@ -8,7 +8,8 @@
   "shell": {
     "scripts": {
       "test":  "echo 'Nothing to test.'",
-      "build": "echo 'Nothing to build.'"
+      "build":  "echo 'Nothing to build.'",
+      "release": "echo 'Nothing to release.'"
     }
   }
 }
