@@ -13,7 +13,7 @@ jobs:
       - uses: jetify-com/devbox-install-action@v0.12.0
       - run: devbox run test
 
-  build:
+  release:
     runs-on: ubuntu-24.04
     needs:
       - test
@@ -31,9 +31,10 @@ jobs:
         with:
           dry_run: true
       - uses: jetify-com/devbox-install-action@v0.12.0
-      - run: devbox run build
+      - run: devbox run release
         env:
           APP_TAG: ${{ steps.semantic-release-tags.outputs.new_release_version }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
