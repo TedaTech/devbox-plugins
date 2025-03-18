@@ -10,13 +10,6 @@
     ".github/setup/action.yaml": ".github/setup/action.yaml",
     ".github/workflows/test.yaml": ".github/workflows/test.yaml",
     ".github/workflows/release.yaml": ".github/workflows/release.yaml",
-    "release.config.mjs": "release.config.mjs",
-    "{{ .Virtenv }}/docker-release.sh": ".devbox/docker-release.sh"
-  },
-  "shell": {
-    "init_hook": "chmod +x {{ .Virtenv }}/docker-release.sh || true",
-    "scripts": {
-      "release": "{{ .Virtenv }}/docker-release.sh"
-    }
+    "release.config.mjs": "release.config.mjs"
   }
 }
