@@ -15,7 +15,8 @@
     "skaffold@latest",
     "gh@latest",
     "kubeswitch@latest",
-    "krew@latest"
+    "krew@latest",
+    "bashInteractive@latest"
   ],
   "create_files": {
     "{{ .Virtenv }}/create-env-secret.sh": ".devbox/create-env-secret.sh"
