@@ -23,8 +23,8 @@
       "lint:php": [
         "vendor/bin/php-cs-fixer check --diff"
       ],
-      "fix:php": [
-        "yamlfmt -conf .yamlfmt"
+      "format:php": [
+        "vendor/bin/php-cs-fixer fix"
       ]
     }
   }

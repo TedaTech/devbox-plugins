@@ -33,12 +33,6 @@
       ],
       "format:yaml": [
         "yamlfmt -conf .yamlfmt"
-      ],
-      "lint:json": [
-        "yamllint -c .yamllint . -f auto"
-      ],
-      "format:json": [
-        "yamlfmt -conf .yamlfmt"
       ]
     }
   }
