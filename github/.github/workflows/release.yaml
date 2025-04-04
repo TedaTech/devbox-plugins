@@ -43,6 +43,7 @@ jobs:
           command: build
           push: true
           tag: ${{ "{{" }} steps.semantic-release-tags.outputs.new_release_version {{ "}}" }}
+          skaffold-version: "2.14.2"
       - uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ "{{" }} secrets.GITHUB_TOKEN {{ "}}" }}
