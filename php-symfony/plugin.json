@@ -12,12 +12,12 @@
     "scripts": {
       "build": [
         "npm install",
-        "composer install --no-progress --no-suggest --prefer-dist",
+        "devbox run php:ensure-composer-installed",
         "npm run build"
       ],
       "test": [
         "docker compose up --wait --quiet-pull",
-        "composer install --no-progress",
+        "devbox run php:ensure-composer-installed",
         "npm install",
         "npm run build",
         "php bin/console doctrine:database:drop --env=test --force --if-exists",
@@ -28,6 +28,7 @@
       ],
       "dev": [
         "docker compose up --wait",
+        "devbox run php:ensure-composer-installed",
         "php bin/console doctrine:database:create --if-not-exists",
         "php bin/console doctrine:schema:update --force",
         "php bin/console doctrine:fixtures:load --no-interaction",
