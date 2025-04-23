@@ -20,10 +20,15 @@
   },
   "shell": {
     "scripts": {
+      "php:ensure-composer-installed": [
+        "test -f vendor/bin/php-cs-fixer || composer install --no-cache --prefer-dist --no-autoloader --no-scripts --no-progress --no-interaction"
+      ],
       "lint:php": [
+        "devbox run php:ensure-composer-installed",
         "vendor/bin/php-cs-fixer check --diff"
       ],
       "format:php": [
+        "devbox run php:ensure-composer-installed",
         "vendor/bin/php-cs-fixer fix"
       ]
     }
