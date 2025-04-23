@@ -13,7 +13,8 @@
   ],
   "env": {
     "PHP_CS_FIXER_IGNORE_ENV": "1",
-    "PHPRC": "{{ .DevboxDirRoot }}/php/php.ini"
+    "PHPRC": "{{ .DevboxDirRoot }}/php/php.ini",
+    "COMPOSER_INSTALL_ARGS": "--prefer-dist --no-scripts --no-progress --no-interaction"
   },
   "create_files": {
     "{{ .DevboxDirRoot }}/php/php.ini": "devbox.d/php/php.ini"
@@ -21,7 +22,7 @@
   "shell": {
     "scripts": {
       "php:ensure-composer-installed": [
-        "test -f vendor/bin/php-cs-fixer || composer install --no-cache --prefer-dist --no-autoloader --no-scripts --no-progress --no-interaction"
+        "test -f vendor/bin/php-cs-fixer || composer install ${COMPOSER_INSTALL_ARGS}"
       ],
       "lint:php": [
         "devbox run php:ensure-composer-installed",
