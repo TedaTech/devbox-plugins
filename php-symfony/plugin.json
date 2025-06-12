@@ -16,7 +16,9 @@
         "npm run build"
       ],
       "test": [
-        "docker compose up --wait --quiet-pull",
+        "devbox version",
+        "docker compose up -d",
+        "until docker compose ps --format '{{.Name}} {{.Health}}' | grep -v 'healthy' | grep -qv 'running'; do sleep 1; done",
         "devbox run php:ensure-composer-installed",
         "npm install",
         "npm run build",
@@ -27,7 +29,10 @@
         "php bin/phpunit --stop-on-failure"
       ],
       "dev": [
-        "docker compose up --wait",
+        "devbox version",
+        "docker compose up -d",
+        "# Wait for containers to be healthy",
+        "until docker compose ps --format '{{.Name}} {{.Health}}' | grep -v 'healthy' | grep -qv 'running'; do sleep 1; done",
         "devbox run php:ensure-composer-installed",
         "php bin/console doctrine:database:create --if-not-exists",
         "php bin/console doctrine:schema:update --force",
