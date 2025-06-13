@@ -17,8 +17,8 @@
       ],
       "test": [
         "devbox version",
-        "docker compose up -d",
-        "until docker compose ps --format '{{.Name}} {{.Health}}' | grep -v 'healthy' | grep -qv 'running'; do sleep 1; done",
+        "docker compose version",
+        "docker compose up --detach --wait --wait-timeout=60",
         "devbox run php:ensure-composer-installed",
         "npm install",
         "npm run build",
@@ -30,9 +30,8 @@
       ],
       "dev": [
         "devbox version",
-        "docker compose up -d",
-        "# Wait for containers to be healthy",
-        "until docker compose ps --format '{{.Name}} {{.Health}}' | grep -v 'healthy' | grep -qv 'running'; do sleep 1; done",
+        "docker compose version",
+        "docker compose up --detach --wait --wait-timeout=60",
         "devbox run php:ensure-composer-installed",
         "php bin/console doctrine:database:create --if-not-exists",
         "php bin/console doctrine:schema:update --force",
