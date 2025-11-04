@@ -12,7 +12,8 @@
     "php84Extensions.amqp@latest",
     "php84Extensions.opentelemetry@latest",
     "php84Extensions.redis@latest",
-    "php84Extensions.xsl@latest"
+    "php84Extensions.xsl@latest",
+    "php84Extensions.imagick@latest"
   ],
   "env": {
     "PHP_CS_FIXER_IGNORE_ENV": "1",
